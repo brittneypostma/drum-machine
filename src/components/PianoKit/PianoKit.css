@@ -1,0 +1,113 @@
+#PianoKit {
+  height: 10vh;
+  width: 49vw;
+  margin-top: 20px;
+  background-color: #111;
+  border: 2px outset rgb(160, 160, 160);
+  padding: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.piano {
+  position: relative;
+  display: flex;
+  width: 49vw;
+  height: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.key {
+  background: rgba(255, 255, 255, 0.8);
+  background-size: contain;
+  position: relative;
+  height: 100%;
+  flex-basis: 5em;
+  border: 1px solid #111;
+  font-size: 0.8rem;
+  transition: all 0.07s ease;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 0.5rem black;
+  margin: 0;
+  padding: 0;
+}
+
+.playing {
+  transform: translateX(0);
+  transform: translateY(0.8em);
+}
+
+kbd {
+  color: white;
+  display: block;
+  font-size: 2rem;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.sound {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: #010101;
+  text-shadow: none;
+  margin-bottom: 1.5rem;
+}
+
+.sound.high {
+  color: #e9e9e9;
+}
+
+.piano .white {
+  background-color: white;
+  z-index: 1;
+  border-left: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+
+.piano .white:active {
+  border-top: 1px solid #777;
+  border-left: 1px solid #999;
+  border-bottom: 1px solid #999;
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1) inset,
+    -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #e9e9e9 100%);
+}
+
+.black {
+  height: 80%;
+  width: 2vw;
+  flex-basis: 0;
+  margin: 0 0 0 -1em;
+  z-index: 2;
+  border: 1px solid #000;
+  border-radius: 0 0 3px 3px;
+  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
+    0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #222 0%, #555 100%);
+}
+
+.black:active {
+  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
+    0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, #444 0%, #222 100%);
+}
+
+.a,
+.b,
+.d,
+.e {
+  margin: 0 0 0 -1em;
+}
+
+.g {
+  margin-left: -0.8em;
+}
+
+.c3,
+.f,
+.c4 {
+  margin-left: -0.2em;
+}

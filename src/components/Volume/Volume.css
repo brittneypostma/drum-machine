@@ -1,0 +1,129 @@
+body {
+  --bgColor: #7c7c7c;
+  --sliderBg: #f7f7f7;
+  --line: #5aaeb4;
+}
+#Volume {
+  height: 20vh;
+  width: 5vh;
+}
+
+span {
+  font-size: 1.3em;
+}
+
+.map-slider {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  background: var(--sliderBg);
+  border-radius: 3px;
+  text-align: center;
+  background-image: -webkit-repeating-linear-gradient(
+      left,
+      hsla(0, 0%, 100%, 0) 0%,
+      hsla(0, 0%, 100%, 0) 6%,
+      hsla(0, 0%, 100%, 0.1) 7.5%
+    ),
+    -webkit-repeating-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(
+            0,
+            0%,
+            0%,
+            0
+          )
+          4%, hsla(0, 0%, 0%, 0.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0, 0%, 100%, 0) 0%, hsla(
+            0,
+            0%,
+            100%,
+            0
+          )
+          1.2%, hsla(0, 0%, 100%, 0.15) 2.2%),
+    linear-gradient(
+      180deg,
+      hsl(0, 0%, 78%) 0%,
+      hsl(0, 0%, 90%) 47%,
+      hsl(0, 0%, 78%) 53%,
+      hsl(0, 0%, 70%) 100%
+    );
+
+  border: 2px inset rgb(231, 227, 227);
+  position: relative;
+  color: #474747;
+}
+
+.map-slider::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-image: -webkit-repeating-linear-gradient(
+      left,
+      hsla(0, 0%, 100%, 0) 0%,
+      hsla(0, 0%, 100%, 0) 6%,
+      hsla(0, 0%, 100%, 0.1) 7.5%
+    ),
+    -webkit-repeating-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(
+            0,
+            0%,
+            0%,
+            0
+          )
+          4%, hsla(0, 0%, 0%, 0.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0, 0%, 100%, 0) 0%, hsla(
+            0,
+            0%,
+            100%,
+            0
+          )
+          1.2%, hsla(0, 0%, 100%, 0.15) 2.2%),
+    linear-gradient(
+      180deg,
+      hsl(0, 0%, 78%) 0%,
+      hsl(0, 0%, 90%) 47%,
+      hsl(0, 0%, 78%) 53%,
+      hsl(0, 0%, 70%) 100%
+    );
+  position: absolute;
+  left: 0;
+  border: 1px inset rgb(255, 255, 255);
+}
+.fa-plus {
+  display: block;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.fa-minus {
+  display: block;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.drag-line {
+  width: 10px;
+  height: 12vh;
+  background: var(--background);
+  border-radius: 8px;
+  margin: 10px 25px;
+  position: relative;
+}
+.line {
+  width: 10px;
+  height: 12vh;
+  background: var(--line);
+  border: 2px inset white;
+  margin: 25px -1px;
+  position: absolute;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.draggable-button {
+  width: 2.5vh;
+  height: 2.5vh;
+  background-image: linear-gradient(white, silver);
+  border: 2px ridge white;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.2);
+  margin: -5px 0 0 -12px;
+  cursor: pointer;
+}

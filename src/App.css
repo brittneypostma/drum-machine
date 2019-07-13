@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: grid;
+  justify-content: center;
+  position: relative;
+  top: 25vh;
+  width: 100%;
 }
 
 .App-logo {
